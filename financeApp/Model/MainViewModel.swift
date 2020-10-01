@@ -13,7 +13,7 @@ class MainViewModel {
         case increase, decrease
     }
     
-    var balance: Double = 98.9
+    var balance: Double = 0.0
     
     var categories = [Categories]()
     
@@ -22,15 +22,15 @@ class MainViewModel {
     }
     
     private func setupCategories() {
-        self.categories.append(Categories(name: "Transport",     image: "car.fill"))
-        self.categories.append(Categories(name: "Shopping",      image: "cart"))
-        self.categories.append(Categories(name: "Health",        image: "cross"))
-        self.categories.append(Categories(name: "Entertainment", image: "gamecontroller"))
-        self.categories.append(Categories(name: "Family",        image: "person.3"))
-        self.categories.append(Categories(name: "Hobby",         image: "paintbrush.pointed"))
-        self.categories.append(Categories(name: "Charity",       image: "gift"))
-        self.categories.append(Categories(name: "Education",     image: "book"))
-        self.categories.append(Categories(name: "House",         image: "house"))
+        self.categories.append(Categories(name: "Transport",     image: "car.fill",           moneySpent: 0.0))
+        self.categories.append(Categories(name: "Shopping",      image: "cart",               moneySpent: 0.0))
+        self.categories.append(Categories(name: "Health",        image: "cross",              moneySpent: 0.0))
+        self.categories.append(Categories(name: "Entertainment", image: "gamecontroller",     moneySpent: 0.0))
+        self.categories.append(Categories(name: "Family",        image: "person.3",           moneySpent: 0.0))
+        self.categories.append(Categories(name: "Hobby",         image: "paintbrush.pointed", moneySpent: 0.0))
+        self.categories.append(Categories(name: "Charity",       image: "gift",               moneySpent: 0.0))
+        self.categories.append(Categories(name: "Education",     image: "book",               moneySpent: 0.0))
+        self.categories.append(Categories(name: "House",         image: "house", 	          moneySpent: 0.0))
     }
     
     func changeBalance(action: BalanceActions, on value: String?) {
@@ -42,6 +42,15 @@ class MainViewModel {
                 case .increase:
                     self.balance += val
                 }
+            }
+        }
+    }
+    
+    //FIXME: - Can't use money if balance < 0!
+    func addSpentMoneyToCategory(category: Categories, on value: String?) {
+        if let value = value {
+            if let val = Double(value) {
+                category.moneySpent += val
             }
         }
     }

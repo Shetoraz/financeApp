@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        let cv     = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.translatesAutoresizingMaskIntoConstraints = false
         cv.register(FNCollectionCell.self, forCellWithReuseIdentifier: "mainCell")
         return cv
@@ -73,7 +73,7 @@ class MainViewController: UIViewController {
     }
 }
 
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.model.categories.count
@@ -95,11 +95,22 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "mainCell", for: indexPath) as! FNCollectionCell
         let item = self.model.categories[indexPath.row]
-        cell.setupCell(text: item.name, image: item.image)
+        cell.setupCell(text: item.name, image: item.image, moneySpent: item.moneySpent)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let vc                    = AddViewController()
+        vc.modalPresentationStyle = .custom
+        vc.callback = { value in
+            self.model.changeBalance(action: .decrease, on: value)
+            self.model.addSpentMoneyToCategory(category: self.model.categories[indexPath.row], on: value)
+            DispatchQueue.main.async {
+                self.balanceLabel.text = "Balance: \(self.model.balance)$"
+                self.collectionView.reloadData()
+            }
+        }
+        present(vc, animated: true)
         self.collectionView.deselectItem(at: indexPath, animated: true)
     }
 }

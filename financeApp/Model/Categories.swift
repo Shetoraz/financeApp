@@ -7,7 +7,16 @@
 
 import Foundation
 
-struct Categories {
+class Categories {
+    
     let name: String
     let image: String
+    var moneySpent: Double
+    
+    init(name: String, image: String, moneySpent: Double) {
+        self.name = name
+        self.image = image
+        self.moneySpent = moneySpent
+    }
+    
 }

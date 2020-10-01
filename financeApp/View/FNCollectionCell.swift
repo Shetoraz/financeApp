@@ -9,8 +9,9 @@ import UIKit
 
 class FNCollectionCell: UICollectionViewCell {
     
-    let categoryName = UILabel()
-    let categoryImage = UIImageView()
+    let categoryName    = UILabel()
+    let categoryImage   = UIImageView()
+    let moneySpentLabel = UILabel()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -35,6 +36,11 @@ class FNCollectionCell: UICollectionViewCell {
         self.contentView.addSubview(categoryName)
         self.categoryName.anchorCenterXToSubview(subView: self)
         self.categoryName.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8).isActive = true
+        
+        self.contentView.addSubview(moneySpentLabel)
+        self.moneySpentLabel.anchorCenterXToSubview(subView: self)
+        self.moneySpentLabel.textColor = .white
+        self.moneySpentLabel.topAnchor.constraint(equalTo: topAnchor, constant: 8).isActive = true
     }
     
     private func addImage() {
@@ -44,12 +50,15 @@ class FNCollectionCell: UICollectionViewCell {
         self.categoryImage.anchorCenterSubview(subView: self, heightConstant: 40.0)
     }
     
-    func setupCell(text: String?, image: String?) {
-        if let text = text {
-            categoryName.text = text
-        }
-        if let image = image {
-            self.categoryImage.image = UIImage(systemName: image)?.withTintColor(.white, renderingMode: .alwaysOriginal)
+    func setupCell(text: String?, image: String?, moneySpent: Double?) {
+            if let text = text {
+                self.categoryName.text = text
+            }
+            if let image = image {
+                self.categoryImage.image = UIImage(systemName: image)?.withTintColor(.white, renderingMode: .alwaysOriginal)
+            }
+            if let moneySpent = moneySpent {
+                self.moneySpentLabel.text = String(moneySpent)
         }
     }
 }

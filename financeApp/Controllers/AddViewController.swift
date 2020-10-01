@@ -23,7 +23,7 @@ class AddViewController: UIViewController {
     private let menuHeight   = UIScreen.main.bounds.height / 4
     private var isPresenting = false
     
-    var callback: ((String)->())?
+    var callback: ((String) -> ())?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -110,10 +110,10 @@ extension AddViewController: UIViewControllerTransitioningDelegate, UIViewContro
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let containerView = transitionContext.containerView
+        let containerView    = transitionContext.containerView
         let toViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to)
-        guard let toVC = toViewController else { return }
-        isPresenting = !isPresenting
+        guard let toVC       = toViewController else { return }
+        isPresenting         = !isPresenting
         
         if isPresenting == true {
             containerView.addSubview(toVC.view)
