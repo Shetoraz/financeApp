@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		3A4D3D66251F95FF0036FE41 /* UIView + Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D65251F95FF0036FE41 /* UIView + Constraints.swift */; };
 		3A4D3D6E251FBE1E0036FE41 /* CALayer + Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D6D251FBE1E0036FE41 /* CALayer + Gradient.swift */; };
-		3A4D3D75251FCBF30036FE41 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D74251FCBF30036FE41 /* Categories.swift */; };
-		3A4D3D78251FCDAC0036FE41 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D77251FCDAC0036FE41 /* MainViewModel.swift */; };
+		3A4D3D75251FCBF30036FE41 /* FNCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D74251FCBF30036FE41 /* FNCategories.swift */; };
+		3A4D3D78251FCDAC0036FE41 /* FNMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4D3D77251FCDAC0036FE41 /* FNMainViewModel.swift */; };
+		3A50C209252CAD8200556BEC /* FNStatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A50C208252CAD8200556BEC /* FNStatsViewController.swift */; };
 		3AB09E64251A45270028CDF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB09E63251A45270028CDF3 /* AppDelegate.swift */; };
 		3AB09E68251A45270028CDF3 /* FNTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB09E67251A45270028CDF3 /* FNTabBarController.swift */; };
 		3AB09E6D251A452A0028CDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB09E6C251A452A0028CDF3 /* Assets.xcassets */; };
 		3AB09E70251A452A0028CDF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB09E6E251A452A0028CDF3 /* LaunchScreen.storyboard */; };
-		3AB09E82251A4BCE0028CDF3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB09E81251A4BCE0028CDF3 /* MainViewController.swift */; };
+		3AB09E82251A4BCE0028CDF3 /* FNMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB09E81251A4BCE0028CDF3 /* FNMainViewController.swift */; };
 		3AB09E85251A50A00028CDF3 /* FNLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB09E84251A50A00028CDF3 /* FNLabel.swift */; };
 		3AB09E88251A5A2D0028CDF3 /* FNCategoryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB09E87251A5A2D0028CDF3 /* FNCategoryButton.swift */; };
 		3AC94BB62520C96C0013BF60 /* FNAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC94BB52520C96C0013BF60 /* FNAddButton.swift */; };
-		3AC94BC02520FA330013BF60 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC94BBF2520FA330013BF60 /* AddViewController.swift */; };
+		3AC94BC02520FA330013BF60 /* FNAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC94BBF2520FA330013BF60 /* FNAddViewController.swift */; };
 		3ADEB7B025238F96005603F2 /* FNValueInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADEB7AF25238F96005603F2 /* FNValueInputView.swift */; };
 		3AFAEEF9251D196E008FC662 /* FNCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFAEEF8251D196E008FC662 /* FNCollectionCell.swift */; };
 		3AFFCE25251D04CB00273A1B /* UIView + Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFCE24251D04CB00273A1B /* UIView + Gradient.swift */; };
@@ -28,19 +29,20 @@
 /* Begin PBXFileReference section */
 		3A4D3D65251F95FF0036FE41 /* UIView + Constraints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Constraints.swift"; sourceTree = "<group>"; };
 		3A4D3D6D251FBE1E0036FE41 /* CALayer + Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer + Gradient.swift"; sourceTree = "<group>"; };
-		3A4D3D74251FCBF30036FE41 /* Categories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
-		3A4D3D77251FCDAC0036FE41 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		3A4D3D74251FCBF30036FE41 /* FNCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNCategories.swift; sourceTree = "<group>"; };
+		3A4D3D77251FCDAC0036FE41 /* FNMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMainViewModel.swift; sourceTree = "<group>"; };
+		3A50C208252CAD8200556BEC /* FNStatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNStatsViewController.swift; sourceTree = "<group>"; };
 		3AB09E60251A45270028CDF3 /* financeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = financeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB09E63251A45270028CDF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB09E67251A45270028CDF3 /* FNTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNTabBarController.swift; sourceTree = "<group>"; };
 		3AB09E6C251A452A0028CDF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB09E6F251A452A0028CDF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AB09E71251A452A0028CDF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3AB09E81251A4BCE0028CDF3 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		3AB09E81251A4BCE0028CDF3 /* FNMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNMainViewController.swift; sourceTree = "<group>"; };
 		3AB09E84251A50A00028CDF3 /* FNLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNLabel.swift; sourceTree = "<group>"; };
 		3AB09E87251A5A2D0028CDF3 /* FNCategoryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNCategoryButton.swift; sourceTree = "<group>"; };
 		3AC94BB52520C96C0013BF60 /* FNAddButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNAddButton.swift; sourceTree = "<group>"; };
-		3AC94BBF2520FA330013BF60 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		3AC94BBF2520FA330013BF60 /* FNAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNAddViewController.swift; sourceTree = "<group>"; };
 		3ADEB7AF25238F96005603F2 /* FNValueInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNValueInputView.swift; sourceTree = "<group>"; };
 		3AFAEEF8251D196E008FC662 /* FNCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FNCollectionCell.swift; sourceTree = "<group>"; };
 		3AFFCE24251D04CB00273A1B /* UIView + Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Gradient.swift"; sourceTree = "<group>"; };
@@ -61,8 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				3AB09E67251A45270028CDF3 /* FNTabBarController.swift */,
-				3AB09E81251A4BCE0028CDF3 /* MainViewController.swift */,
-				3AC94BBF2520FA330013BF60 /* AddViewController.swift */,
+				3A50C208252CAD8200556BEC /* FNStatsViewController.swift */,
+				3AB09E81251A4BCE0028CDF3 /* FNMainViewController.swift */,
+				3AC94BBF2520FA330013BF60 /* FNAddViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -131,8 +134,8 @@
 		3AC94BBD2520F7F70013BF60 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				3A4D3D74251FCBF30036FE41 /* Categories.swift */,
-				3A4D3D77251FCDAC0036FE41 /* MainViewModel.swift */,
+				3A4D3D74251FCBF30036FE41 /* FNCategories.swift */,
+				3A4D3D77251FCDAC0036FE41 /* FNMainViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -209,17 +212,18 @@
 				3AB09E85251A50A00028CDF3 /* FNLabel.swift in Sources */,
 				3ADEB7B025238F96005603F2 /* FNValueInputView.swift in Sources */,
 				3A4D3D66251F95FF0036FE41 /* UIView + Constraints.swift in Sources */,
-				3AB09E82251A4BCE0028CDF3 /* MainViewController.swift in Sources */,
+				3AB09E82251A4BCE0028CDF3 /* FNMainViewController.swift in Sources */,
 				3AFFCE25251D04CB00273A1B /* UIView + Gradient.swift in Sources */,
 				3AB09E68251A45270028CDF3 /* FNTabBarController.swift in Sources */,
 				3AC94BB62520C96C0013BF60 /* FNAddButton.swift in Sources */,
 				3A4D3D6E251FBE1E0036FE41 /* CALayer + Gradient.swift in Sources */,
 				3AFAEEF9251D196E008FC662 /* FNCollectionCell.swift in Sources */,
-				3A4D3D75251FCBF30036FE41 /* Categories.swift in Sources */,
+				3A50C209252CAD8200556BEC /* FNStatsViewController.swift in Sources */,
+				3A4D3D75251FCBF30036FE41 /* FNCategories.swift in Sources */,
 				3AB09E64251A45270028CDF3 /* AppDelegate.swift in Sources */,
 				3AB09E88251A5A2D0028CDF3 /* FNCategoryButton.swift in Sources */,
-				3AC94BC02520FA330013BF60 /* AddViewController.swift in Sources */,
-				3A4D3D78251FCDAC0036FE41 /* MainViewModel.swift in Sources */,
+				3AC94BC02520FA330013BF60 /* FNAddViewController.swift in Sources */,
+				3A4D3D78251FCDAC0036FE41 /* FNMainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

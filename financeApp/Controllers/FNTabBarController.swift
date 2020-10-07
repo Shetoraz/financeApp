@@ -11,10 +11,12 @@ class FNTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let mainController             = MainViewController()
+        let mainController             = FNMainViewController()
+        let statsController            = FNStatsViewController()
         let navController              = UINavigationController(rootViewController: mainController)
         navController.tabBarItem.title = "Main"
-        viewControllers = [navController]
+        statsController.title          = "Stats"
+        viewControllers                = [navController, statsController]
     }
     
     private func createNavControllerWithNavBar(controller: UIViewController, title: String) -> UINavigationController {

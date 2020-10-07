@@ -7,9 +7,9 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class FNMainViewController: UIViewController {
     
-    let model = MainViewModel()
+    let model = FNMainViewModel()
     
     fileprivate let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
         self.view.addSubview(balanceLabel)
         self.balanceLabel.anchorCenterXToSubview(subView: view)
         self.balanceLabel.topAnchor.constraint(lessThanOrEqualToSystemSpacingBelow: self.view.safeAreaLayoutGuide.topAnchor, multiplier: 2).isActive = true
-        self.balanceLabel.text      = "Balance: \(self.model.balance)$"
+        self.balanceLabel.text = "Balance: \(self.model.balance)$"
     }
     
     private func setupAddButton() {
@@ -41,16 +41,16 @@ class MainViewController: UIViewController {
         self.addButton.anchorCenterXToSubview(subView: view)
         self.addButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
         self.addButton.anchor(top: nil,
-                              leading: view.safeAreaLayoutGuide.leadingAnchor,
-                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              leading:  view.safeAreaLayoutGuide.leadingAnchor,
+                              bottom:   view.safeAreaLayoutGuide.bottomAnchor,
                               trailing: view.safeAreaLayoutGuide.trailingAnchor,
-                              padding: UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16))
+                              padding:  UIEdgeInsets(top: 0, left: 16, bottom: 16, right: 16))
         self.addButton.addTarget(self, action: #selector(showAddMenu), for: .touchUpInside)
     }
     
     @objc func showAddMenu() {
         // FIXME: - Popup
-        let vc                    = AddViewController()
+        let vc                    = FNAddViewController()
         vc.modalPresentationStyle = .custom
         vc.callback = { value in
             self.model.changeBalance(action: .increase, on: value)
@@ -63,33 +63,33 @@ class MainViewController: UIViewController {
     
     private func setupCollectionView() {
         self.view.addSubview(collectionView)
-        self.collectionView.anchor(top: balanceLabel.bottomAnchor,
-                                   leading: view.safeAreaLayoutGuide.leadingAnchor,
-                                   bottom: view.bottomAnchor,
-                                   trailing: view.safeAreaLayoutGuide.trailingAnchor)
+        self.collectionView.anchor(top:      self.balanceLabel.bottomAnchor,
+                                   leading:  self.view.safeAreaLayoutGuide.leadingAnchor,
+                                   bottom:   self.view.bottomAnchor,
+                                   trailing: self.view.safeAreaLayoutGuide.trailingAnchor)
         self.collectionView.backgroundColor = .black
         self.collectionView.delegate        = self
         self.collectionView.dataSource      = self
     }
 }
 
-extension MainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+extension FNMainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.model.categories.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let size = collectionView.bounds.width/3.5
+        let size = collectionView.bounds.width / 3.5
         
         return CGSize(width: size, height: size)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 16,
-                            left: 16,
+        return UIEdgeInsets(top:    16,
+                            left:   16,
                             bottom: 0,
-                            right: 16)
+                            right:  16)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,7 +100,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let vc                    = AddViewController()
+        let vc                    = FNAddViewController()
         vc.modalPresentationStyle = .custom
         vc.callback = { value in
             self.model.changeBalance(action: .decrease, on: value)

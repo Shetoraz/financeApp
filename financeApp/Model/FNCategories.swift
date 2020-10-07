@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Categories {
+class FNCategories {
     
     let name: String
     let image: String
